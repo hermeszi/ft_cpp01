@@ -10,17 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
-#include <cstdio>
-#include <iostream>
+#include "../inc/Zombie.hpp"
+
 using std::cout;
 using std::cin;
 using std::endl;
 #include <string>
 using std::string;
 using std::getline;
-
-#include "../inc/Zombie.hpp"
 
 Zombie* newZombie( std::string name )
 {

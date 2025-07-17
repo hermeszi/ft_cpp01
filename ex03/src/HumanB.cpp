@@ -12,10 +12,11 @@
 
 #include "../inc/HumanB.hpp"
 
-using std::string;
-using std::endl;
 using std::cout;
 using std::cin;
+using std::endl;
+using std::string;
+using std::getline;
 
 HumanB::HumanB(std::string name) : name(name)
 {

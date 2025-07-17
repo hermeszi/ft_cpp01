@@ -10,19 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
-#include <cstdio>
-#include <iostream>
-using std::cout;
-using std::cin;
-using std::endl;
-#include <string>
-using std::string;
-using std::getline;
-
 #include "../inc/Weapon.hpp"
 #include "../inc/HumanA.hpp"
 #include "../inc/HumanB.hpp"
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::getline;
 
 int	main(int argc, char *argv[])
 {

@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Replacer.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myuen <myuen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 16:53:29 by myuen             #+#    #+#             */
-/*   Updated: 2025/07/17 21:03:47 by myuen            ###   ########.fr       */
+/*   Updated: 2025/07/17 20:58:29 by myuen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/HumanA.hpp"
+#ifndef REPLACER_HPP
+#define REPLACER_HPP
 
-using std::cout;
-using std::cin;
-using std::endl;
+#include <cstdlib>
+#include <cstdio>
+#include <iostream>
+#include <fstream>
+
 using std::string;
-using std::getline;
 
-HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
+class Replacer
 {
-    
-}
-HumanA::~HumanA()
-{
-    
-}
-void    HumanA::attack()
-{
-    cout << this->name << " attacks with their " << this->weapon.getType()<<endl;
-}
+private:
+	std::string filename;
+    std::string s1, s2;
+    std::string content;
+    std::string result;
+public:
+	Replacer(string filename, string s1, string s2);
+	~Replacer();
+    bool loadFile();
+    void replaceAll();
+    bool save();
+};
+
+
+#endif

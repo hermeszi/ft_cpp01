@@ -13,10 +13,11 @@
 
 #include "../inc/Weapon.hpp"
 
-using std::string;
-using std::endl;
 using std::cout;
 using std::cin;
+using std::endl;
+using std::string;
+using std::getline;
 
 Weapon::Weapon()
 {

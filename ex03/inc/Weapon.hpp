@@ -13,9 +13,15 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
-#include <iostream>
 #include <cstdlib>
-#include <ctime>
+#include <cstdio>
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+#include <string>
+using std::string;
+using std::getline;
 
 class Weapon
 {

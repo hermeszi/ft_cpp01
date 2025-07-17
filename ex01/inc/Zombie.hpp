@@ -14,7 +14,8 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
-//#include <sstream>
+#include <string>
+#include <sstream>
 #include <cstdlib>
 #include <ctime>
 
