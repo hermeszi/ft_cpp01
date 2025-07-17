@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: myuen <myuen@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/11 16:53:29 by myuen             #+#    #+#             */
+/*   Updated: 2025/07/17 17:09:00 by myuen            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
+
+#include <iostream>
+//#include <sstream>
+#include <cstdlib>
+#include <ctime>
+
+class Zombie
+{
+private:
+	const std::string	name;
+public:
+	Zombie(std::string name);
+	~Zombie();
+	void	announce (void) const;
+};
+
+#endif
