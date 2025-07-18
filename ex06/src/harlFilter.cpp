@@ -85,14 +85,66 @@ void Harl::filter(std::string level)
 		}
 	}
 
-	if (index == -1)
+	switch (index)
 	{
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-		return;
+		case 0:
+		{
+			complain("DEBUG");
+			complain("INFO");
+			complain("WARNING");
+			complain("ERROR");
+			break;
+		}
+		case 1:
+		{
+			complain("INFO");
+			complain("WARNING");
+			complain("ERROR");
+			break;
+		}
+		case 2:
+		{
+			complain("WARNING");
+			complain("ERROR");
+			break;
+		}
+		case 3:
+		{
+			complain("ERROR");
+			break;
+		}
+		default:
+		{
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			break;
+		}
 	}
 
-	do {
-		this->complain(levels[index]);
-		index++;
-	} while (index < 4);
+
 }
+
+// void Harl::filter(std::string level)
+// {
+// 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+// 	int index = -1;
+
+// 	for (int i = 0; i < 4; i++)
+// 	{
+// 		if (level == levels[i])
+// 		{
+// 			index = i;
+// 			break;
+// 		}
+// 	}
+
+// 	if (index == -1)
+// 	{
+// 		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+// 		return;
+// 	}
+
+// 	do {
+// 		this->complain(levels[index]);
+// 		index++;
+// 	} while (index < 4);
+// }
